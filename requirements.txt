@@ -1,0 +1,12 @@
+pandas
+nltk
+tk
+langchain
+chromadb
+sentence-transformers
+torch
+transformers
+langchain-community
+langchain-huggingface
+tkinter
+pyinstaller
