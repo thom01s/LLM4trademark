@@ -1,4 +1,4 @@
-import re
+timport re
 import pandas as pd
 from langchain_community.vectorstores import Chroma
 import chromadb
@@ -127,7 +127,7 @@ def execute_search():
     input_query.delete("1.0", "end")
 
 def close_program():
-    if messagebox.askyesno("Exit", "Do you really want to exit the program?"):
+    if messagebox.askyesno("Exit", "Are you sure?"):
         window.destroy()
         sys.exit(0)
 
@@ -136,19 +136,20 @@ window.title("LLM4trademark - Nice")
 window.geometry("500x300")
 window.protocol("WM_DELETE_WINDOW", close_program)
 
-label = tk.Label(window, text="write the desired product type:", font=("Arial", 12))
+label = tk.Label(window, text="Write the desired product type:", font=("Arial", 12))
 label.pack(pady=10)
 
 input_query = tk.Text(window, height=4, width=50, font=("Arial", 11))
 input_query.pack(pady=5)
 
-button = tk.Button(window, text="Buscar", command=execute_search,
+button = tk.Button(window, text="Search", command=execute_search,
                   font=("Arial", 12), bg="#0078D7", fg="white")
 button.pack(pady=10)
 
-exit_button = tk.Button(window, text="Sair", command=close_program,
+exit_button = tk.Button(window, text="Exit", command=close_program,
                        font=("Arial", 11), bg="#D9534F", fg="white")
 exit_button.pack(pady=5)
 
 window.mainloop()
+
 
